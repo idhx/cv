@@ -21,7 +21,8 @@
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=2.4cm, top=3cm, right=2.4cm, bottom=3.4cm, footskip=1cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -46,7 +47,6 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
@@ -59,7 +59,7 @@
 
 \mobile{(+44) 7584 726 916}
 \email{i.deschenaux@lse.ac.uk}
-\homepage{www.ivandeschenaux.com}
+% \homepage{www.ivandeschenaux.com}
 \github{idhx}
 \linkedin{ivandeschenaux}
 % \gitlab{gitlab-id}
@@ -82,12 +82,11 @@
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
-
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
-  {Ivan Deschenaux~~~·~~~Résumé}
+  {December 2022}
+  {Ivan Deschenaux~~~·~~~Curriculum Vitae}
   {\thepage}
 
 
@@ -95,14 +94,20 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
+% \input{resume/summary.tex}
+\vspace{0.8cm}
 \input{resume/education.tex}
-\input{resume/extracurricular.tex}
+\input{resume/professional.tex}
+\input{resume/grants.tex}
+\input{resume/honours.tex}
+\filbreak
+\input{resume/publications.tex}
+\input{resume/presentations.tex}
+\input{resume/research_experience.tex}
+\input{resume/teaching_experience.tex}
+\input{resume/memberships_workshops.tex}
+\input{resume/service.tex}
+\input{resume/references.tex}
 
 
 %-------------------------------------------------------------------------------

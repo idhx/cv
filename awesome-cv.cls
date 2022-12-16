@@ -89,7 +89,6 @@
   pdfkeywords={}
 }
 
-
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
@@ -131,6 +130,7 @@
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
+\definecolor{linkblue}{HTML}{0000FF}
 % Text colors
 \definecolor{darktext}{HTML}{414141}
 \colorlet{text}{darkgray}
@@ -219,20 +219,47 @@
 \newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
+% For elements of publication
+\newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\publicationdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+
+% For elements of presentation
+\newcommand*{\presentationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\presentationeventstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\presentationdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\presentationlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+
+% For elements of experience
+\newcommand*{\experiencetitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\experiencedatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\experiencedescriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+
+% For elements of membership
+\newcommand*{\membershipdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\membershipdescriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
+% \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+% \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+% \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+% \newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
+% \newcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+% \newcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfontlight\upshape\color{graytext}}
+% \newcommand*{\letternamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+% \newcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
+
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
-\newcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfontlight\upshape\color{graytext}}
+\newcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\lettertextstyle}{\fontsize{10pt}{1.25em}\bodyfont\upshape\color{graytext}}
 \newcommand*{\letternamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
-
 
 %-------------------------------------------------------------------------------
 %                Commands for personal information
@@ -406,6 +433,7 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 % Use to draw horizontal line with specific thickness
 \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
@@ -571,7 +599,8 @@
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  % \vspace{-3mm}
+  \vspace{-1mm}
   \subsectionstyle{#1}
   \phantomsection
 }
@@ -593,7 +622,9 @@
 }{%
   \end{center}
 }
-% Define an entry of cv information
+
+
+% No extra Whitespace if empty fifth arg - https://github.com/posquit0/Awesome-CV/issues/249
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
   \vspace{-2.0mm}
@@ -601,12 +632,13 @@
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+    {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+    {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4}}
+                              \ifempty{#5}{}{\\\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
   \end{tabular*}%
 }
+
 
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
@@ -639,15 +671,115 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2cm} L{\textwidth - 4.0cm} R{2.5cm}}
 }{%
     \end{tabular*}
   \end{center}
 }
+
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
   \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+}
+
+% Define an environment for cvpub
+\newenvironment{cvpublications}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{2cm} P{\textwidth - 2cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
+\newcommand*{\cvpublication}[2]{%
+  \publicationdatestyle{#2} & \publicationtitlestyle{#1} \\
+}
+
+% Define an environment for cvpres
+\newenvironment{cvpresentations}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{2cm} P{\textwidth - 4.5cm} R{2.5cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvpresenation{<title>}{<event>}{<date>}{<location>}
+\newcommand*{\cvpresentation}[4]{%
+  \presentationdatestyle{#3} & \presentationeventstyle{#2}. \presentationtitlestyle{#1} & \presentationlocationstyle{#4} \\
+}
+
+% Define an environment for cvexperiences
+\newenvironment{cvexperiences}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{2cm} P{\textwidth - 2cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvpresenation{<title>}{<event>}{<date>}{<location>}
+\newcommand*{\cvexperience}[3]{%
+  \experiencedatestyle{#3} & \experiencetitlestyle{#1}. \experiencedescriptionstyle{#2} \\
+}
+
+% Define an environment for cvmemberships
+\newenvironment{cvmemberships}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} P{2cm} P{\textwidth - 2cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvpresenation{<title>}{<event>}{<date>}{<location>}
+\newcommand*{\cvmembership}[2]{%
+  & \membershipdescriptionstyle{#1 \ifthenelse{\isempty{#2}}{}{(#2)} } \\
+
+}
+
+% Define an environment for cvreference
+\newenvironment{cvreferences}{%
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{%
+  \end{center}
+}
+
+
+% No extra Whitespace if empty fifth arg - https://github.com/posquit0/Awesome-CV/issues/249
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cvreference}[3]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
+    \entrytitlestyle{#1} \\
+    \descriptionstyle{#2} \\
+    \descriptionstyle{\href{mailto:#3}{\textcolor{linkblue}{#3}}}
+  \end{tabular*}%
 }
 
 % Define an environment for cvskill
@@ -715,7 +847,7 @@
   \end{singlespace}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
-    {\lettertitlestyle{\@lettertitle} \\}
+    {\lettertitlestyle{\@lettertitle} \\\\}
   \lettertextstyle{\@letteropening}
 }
 
