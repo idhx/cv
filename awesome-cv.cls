@@ -221,6 +221,7 @@
 
 % For elements of publication
 \newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\publicationauthorstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{darktext} #1}}
 \newcommand*{\publicationdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
 
 % For elements of presentation
@@ -698,8 +699,8 @@
 
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
-\newcommand*{\cvpublication}[2]{%
-  \publicationdatestyle{#2} & \publicationtitlestyle{#1} \\
+\newcommand*{\cvpublication}[3]{%
+  \publicationdatestyle{#3} & \publicationauthorstyle {#1}. \publicationtitlestyle{#2} \\
 }
 
 % Define an environment for cvpres
