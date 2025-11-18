@@ -22,7 +22,7 @@
 
 % Configure page margins with geometry
 % \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-\geometry{left=2.4cm, top=3cm, right=2.4cm, bottom=3.4cm, footskip=1cm}
+\geometry{left=2cm, top=2cm, right=2cm, bottom=2.4cm, footskip=1cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -55,10 +55,10 @@
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Ivan}{Deschenaux}
 % \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{Department of Methodology, London School of Economics, Houghton Street, London WC2A 2AE}
+\address{London / Remote / Hybrid within 50-mile radius of London}
 
 \mobile{(+44) 7584 726 916}
-\email{i.deschenaux@lse.ac.uk}
+\email{ivan.deschenaux@gmail.com}
 \homepage{www.ivandx.com}
 \github{idhx}
 \linkedin{ivandeschenaux}
@@ -72,9 +72,6 @@
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra informations}
-
-% \quote{``Be the change that you want to see in the world."}
-
 %-------------------------------------------------------------------------------
 
 \definecolor{plainblue}{RGB}{0,0,255}
@@ -94,23 +91,205 @@
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 % \input{resume/summary.tex}
 \vspace{0.8cm}
-\input{resume/education.tex}
-\input{resume/professional.tex}
-\input{resume/grants.tex}
-\input{resume/honours.tex}
-\filbreak
-\input{resume/publications.tex}
-\input{resume/presentations.tex}
-\input{resume/research_experience.tex}
-\input{resume/teaching_experience.tex}
-\input{resume/memberships_workshops.tex}
-\input{resume/service.tex}
-\input{resume/language.tex}
-\input{resume/references.tex}
+
+\cvsection{Summary}
+
+\begin{cvparagraph}
+Postdoctoral researcher transitioning to the tech industry. Expert in qualitative and quantitative research design, with strong programming abilities and advanced data analysis skills.
+
+\end{cvparagraph}
+
+\cvsection{Professional Experience}
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Dpt. of Methodology, London School of Economics. \textcolor{plainblue}{\href{https://rep2si.github.io/}{Rep\textsuperscript{2}Si}} project.} % Organization
+    {Postdoctoral Research Officer} % Job title
+    {London} % Location
+    {2023 --} % Date(s)
+    {
+      \begin{cvitems}
+      \item Occupied a key role in project design, operationalisation of research questions, and development of measurement approaches.
+      \item Wrote an android app for offline data collection, used by multiple researchers in eight remote locations of the global South, to collect the 46,000 dictator game allocations forming the core data for the Rep\textsuperscript{2}SI project.
+      \item Conducted a simulation-based study on inequality in human social networks, requiring simulation of over 400,000 networks and 40M egocentric networks
+      \item Wrote an R package interfacing with C++ to speed up the calculation of inequality measures in human networks, whose execution time is over 10x faster than the most commonly used R package.
+      \item Conducted simulation-based power-analyses
+      \item Designed survey instruments and wrote an offline fuzzy search tool used by fifty research assistants to collect social network data in two South Asian communities.
+      \item Created the data management strategy for the Rep\textsuperscript{2}SI team. Set up the analysis pipeline and trained colleagues in its use.
+      \item Conducted eight months of primary data collection in Nepal. Trained and managed a team of 19 local research assistants.
+      \item Presented at scientific conferences in multiple locations, including at the conference of the International Network for Social Network Analysis, in Paris.
+      \item Wrote research articles and submitted them for publication in academic journals.
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Dpt. of Methodology, London School of Economics} % Organization
+    {LSE Fellow} % Job title
+    {London} % Location
+    {2021 -- 2023} % Date(s)
+    {
+      \begin{cvitems}
+        \item Taught a course in ``Fundamentals of Reserach Design'' to sudents in the LSE department of International Development.
+        \item Supervised over 50 MSc students as they prepared their research projects and composed their MSc dissertations.
+        \item Awarded 4.8/5 and 5/5 in teaching evaluation scores and won two awards for my excellent teaching.
+        \item Wrote research articles and submitted them to academic journals.
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Dpt. of Methodology, London School of Economics} % Organization
+    {ESRC Postdoctoral Fellow} % Job title
+    {London} % Location
+    {2020 -- 2021} % Date(s)
+    {
+      \begin{cvitems}
+        \item Secured an ESRC grant worth over £100,000 for this one-year further training position.
+        \item Fully re-trained in quantitative research methods, Bayesian statistics, social network analysis and experimental methods.
+        \item Developed a course in ``statistics for anthropologists'' which I delivered to first-year PhD students in the LSE Departement of Anthropology for the next four years.
+        \item Published research articles in scientific journals.
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {LSE100, London School of Economics} % Organization
+    {Class Teacher} % Job title
+    {London} % Location
+    {2019 -- 2020} % Date(s)
+    {
+      \begin{cvitems}
+        \item Taught an interdisciplinary course entitled ``Can we control Artificial Intelligence'' to first-year Bachelor students from all LSE Departments.
+        \item Presented at scientific conferences in multiple locations.
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Departement of Anthropology, London School of Economics} % Organization
+    {PhD Student} % Job title
+    {London} % Location
+    {2012 -- 2019} % Date(s)
+    {
+      \begin{cvitems}
+        \item Conducted 21 months of ethnographic fieldwork in Nepal: over 100 in-person interviews in Nepali, extensive participant observation, focus-group discussions.
+        \item Used QDA and thematic analysis to process primary materials.
+        \item Wrote a 100k-word PhD dissertation discussing social inequality in Nepal and contemporary challenges faced by Dalits (ex-``untouchables'')
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+\newpage
+\cvsection{Skills}
+\begin{cvskills}
+
+  % \cvskill
+  %   {Research} % Category
+  %   {Quantitative and qualitative design, data collection, instrument design, simulation-based approaches} % Skills
+
+  \cvskill
+    {Data analysis} % Category
+    {Frequentist and Bayesian data analysis, multilevel modelling, social network analysis (SNA), A/B testing,\newline experiment design, survey design} % Skills
+
+  \cvskill
+    {Programming} % Category
+    {R, SQL, STAN, elisp, bash} % Skills
+
+  \cvskill
+    {Data packages} % Category
+    {tidyverse, ggplot, brms, igraph, marginaleffects} % Skills
+
+  % \cvskill
+  %   {Stat Packages} % Category
+  %   {tidyverse, ggplot, shiny, brms, lme4, igraph, pandas, plotnine} % Skills
+
+  \cvskill
+    {Development tools} % Category
+    {git, Docker, SLURM} % Skills
+
+  \cvskill
+    {Operating systems} % Category
+    {Linux-based, Redhat, Ubuntu, Arch} % Skills
+
+  \cvskill
+    {Qualitative research} % Category
+    {Interviews, focus-groups, ethnography, QDA and thematic analysis} % Skills
+
+  \cvskill
+    {Communication} % Category
+    {Award-winning teaching and communication to non-specialist audiences} % Skills
+
+  \cvskill
+    {Languages} % Category
+    {Native English and French, intermediate German and Italian, fluent Nepali} % Skills
+
+\end{cvskills}
+
+
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {London School of Economics and Political Science} % Institution
+    {PhD in Social Anthropology} % Degree
+    {London, UK} % Location
+    {2012 -- 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Passed with no corrections in August 2019}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {London School of Economics and Political Science} % Institution
+    {MSc Social Anthropology (Learning and Cognition)} % Degree
+    {London, UK} % Location
+    {2011 -- 2012} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Final grade: distinction}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Université de Fribourg} % Institution
+    {BA Philosophy} % Degree
+    {Fribourg, Switzerland} % Location
+    {2006 -- 2010} % Date(s)
+    {}
+
+\end{cventries}
+
+
+
+% \input{resume/grants.tex}
+% \input{resume/honours.tex}
+% \input{resume/publications.tex}
+% \input{resume/presentations.tex}
+% \input{resume/research_experience.tex}
+% \input{resume/teaching_experience.tex}
+% \input{resume/memberships_workshops.tex}
+% \input{resume/service.tex}
+% \input{resume/language.tex}
+% \input{resume/references.tex}
 
 
 %-------------------------------------------------------------------------------
